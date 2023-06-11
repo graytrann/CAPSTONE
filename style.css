@@ -186,6 +186,9 @@ button#trigger-overlay {
   margin: 10px 0;
 }
 
+.overlay ul li a:hover{
+  color: #ff6600;
+}
 .overlay .overlay-close {
   width: 40px;
   height: 40px;
