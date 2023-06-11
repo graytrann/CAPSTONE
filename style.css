@@ -171,10 +171,9 @@ button#trigger-overlay {
   position: relative;
 }
 
-.overlay ul li{
+.overlay ul li {
   text-align: center;
 }
-
 
 .overlay ul li a {
   text-decoration: none;
@@ -186,7 +185,7 @@ button#trigger-overlay {
   margin: 10px 0;
 }
 
-.overlay ul li a:hover{
+.overlay ul li a:hover {
   color: #ff6600;
 }
 .overlay .overlay-close {
@@ -197,12 +196,12 @@ button#trigger-overlay {
   top: 40px;
   overflow: hidden;
   border: none;
-  background:#ff6600;
+  background: #ff6600;
   color: #fff;
   border-radius: 5px;
 }
 
-.overlay .overlay-close{
+.overlay .overlay-close {
   font-size: 20px;
 }
 
@@ -219,8 +218,6 @@ button#trigger-overlay {
   transform: scale(0.9);
   transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
 }
-
-
 
 /* INNER PAGE */
 .about_innerpage {
@@ -864,4 +861,53 @@ h2.widget-title {
   left: -18px;
   border: 1px solid #282828;
   opacity: 0.3;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 400px) {
+  /* HEADER */
+  .header_content {
+    display: flex;
+  }
+  .header_logo .logo_brand {
+    margin-left: 0;
+  }
+  .header_right_content {
+    margin-left: 130px;
+  }
+  .search-bar {
+    display: none;
+  }
+  /* END - HEADER */
+
+  /* FOOTER */
+  #footer_icon {
+    text-align: center;
+  }
+  /* END - FOOTER */
+
+  /* CONTACT */
+  .contactUs_inform {
+    grid-template-columns: 1fr;
+  }
+
+  .contact_findUs_right iframe {
+    width: 360px;
+    height: 400px;
+  }
+
+  .contact_findUs {
+    grid-template-columns: 1fr;
+  }
+
+  /* ABOUT */
+  .title_main {
+    font-size: 26px !important;
+    line-height: 36px;
+    margin-top: 40px;
+  }
+
+  .grid-columns-3 {
+    grid-template-columns: 1fr;
+  }
 }
