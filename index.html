@@ -37,8 +37,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- OWL CRS -->
-    <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
-    <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+    <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/css/styles.css"/>
@@ -1042,27 +1042,28 @@
 
     <script>
       $(document).ready(function () {
-        $(".popup-with-zoom-anim").magnificPopup({
-          type: 'inline',
-
-          alignTop:false,
-          fixedContentPos: false,
-          fixedBgPos: true,
-
-          overflowY: "auto",
-
-          closeBtnInside: true,
-          preloader: false,
-
-          midClick: true,
-          removalDelay: 300,
-          mainClass: "my-mfp-zoom-in"
-        });
-      });
+        $("#owl-agency").owlCarousel({
+          loop: true,
+          nav: false,
+          margin: 50,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false
+            },
+            736: {
+              items: 1,
+              nav: false
+            }
+          }
+        })
+      })
     </script>
 
-<script src="./util.js"></script>
-<script src="./main-backToTop.js"></script>
+
+    <script src="./util.js"></script>
+    <script src="./main-backToTop.js"></script>
 
     <script src="./index.js"></script>
   </body>
