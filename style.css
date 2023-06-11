@@ -142,6 +142,83 @@ button#trigger-overlay {
   padding: 0 8px;
 }
 
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  background: rgb(6 3 0 / 77%);
+}
+
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 34px;
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.overlay ul li{
+  text-align: center;
+}
+
+
+.overlay ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  display: block;
+  color: #fff;
+  transition: color 0.2s;
+  margin: 10px 0;
+}
+
+.overlay .overlay-close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  overflow: hidden;
+  border: none;
+  background:#ff6600;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.overlay .overlay-close{
+  font-size: 20px;
+}
+
+.overlay-scale.open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.4s, opacity 0.4s;
+}
+
+.overlay-scale {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+
+
 /* INNER PAGE */
 .about_innerpage {
   background-size: cover;
@@ -634,11 +711,10 @@ END ABOUT PAGE */
 .widget {
   margin-bottom: 40px;
   padding: 40px 30px;
-  background:#232220;
+  background: #232220;
   border-radius: 5px;
   color: white;
 }
-
 
 form.search-form {
   position: relative;
@@ -650,16 +726,16 @@ form.search-form {
 }
 
 input.search-field {
-    outline: none;
-    width: 100%;
-    color: #c2d0da;
-    background: #232220;
-    padding: 12px 70px 12px 17px;
-    font-size: 18px;
-    height: 55px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    display: block;
+  outline: none;
+  width: 100%;
+  color: #c2d0da;
+  background: #232220;
+  padding: 12px 70px 12px 17px;
+  font-size: 18px;
+  height: 55px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  display: block;
 }
 
 input.search-submit {
@@ -673,7 +749,7 @@ input.search-submit {
   letter-spacing: 0px;
   border: none;
   display: inline-block;
-  background:#ff6600;
+  background: #ff6600;
   position: absolute;
   right: 2px;
   top: 2px;
@@ -681,7 +757,8 @@ input.search-submit {
   padding: 14px;
 }
 
-h2.widget-title, h2.widget-title a {
+h2.widget-title,
+h2.widget-title a {
   font-size: 26px;
   line-height: 38px;
   color: #eee;
@@ -689,25 +766,25 @@ h2.widget-title, h2.widget-title a {
   font-weight: 600;
 }
 
-h2.widget-title{
+h2.widget-title {
   text-align: start;
   margin-left: 28px;
 }
 
-.widget ul{
+.widget ul {
   list-style-type: none;
 }
 
-.widget.widget_recent_entries ul li{
+.widget.widget_recent_entries ul li {
   margin-bottom: 15px;
-    color: #c2d0da;
-    font-size: 16px;
-    line-height: 25px;
-    display: block;
-    align-items: baseline;
-    width: 100%;
-    position: relative;
-    text-align: left;
+  color: #c2d0da;
+  font-size: 16px;
+  line-height: 25px;
+  display: block;
+  align-items: baseline;
+  width: 100%;
+  position: relative;
+  text-align: left;
 }
 
 .widget.widget_recent_entries ul li a {
@@ -716,7 +793,7 @@ h2.widget-title{
   display: flex;
   align-items: baseline;
   width: 100%;
-  transition: .3s ease;
+  transition: 0.3s ease;
   position: relative;
   color: #c2d0da;
   font-size: 19px;
@@ -728,19 +805,17 @@ h2.widget-title{
 
 .widget_recent_comments ul li a {
   font-size: 16px;
-  color:#ff6600;
+  color: #ff6600;
   font-weight: 500;
   text-decoration: none;
-
 }
 
-.widget_recent_comments ul li{
+.widget_recent_comments ul li {
   text-align: start;
   padding: 10px 0;
-  
 }
 
-.widget_recent_comments span{
+.widget_recent_comments span {
   margin-bottom: 0;
   color: #343332;
 }
@@ -756,7 +831,7 @@ h2.widget-title{
   padding: 5px 0;
 }
 
-.widget.widget_archive ul li a{
+.widget.widget_archive ul li a {
   /* text-decoration: none;
   color: #c2d0da; */
   text-transform: capitalize;
@@ -764,7 +839,7 @@ h2.widget-title{
   display: flex;
   align-items: baseline;
   width: 100%;
-  transition: .3s ease;
+  transition: 0.3s ease;
   position: relative;
   color: #c2d0da;
   font-size: 19px;
@@ -773,10 +848,10 @@ h2.widget-title{
   padding: 3px 0;
   text-decoration: none;
 }
-.widget.widget_archive ul li a::before{
+.widget.widget_archive ul li a::before {
   display: inline-block;
-  color:#ff6600;
-  font-family: 'FontAwesome';
+  color: #ff6600;
+  font-family: "FontAwesome";
   content: "";
   width: 8px;
   height: 8px;
@@ -785,5 +860,5 @@ h2.widget-title{
   top: 11px;
   left: -18px;
   border: 1px solid #282828;
-  opacity: .3;
+  opacity: 0.3;
 }
