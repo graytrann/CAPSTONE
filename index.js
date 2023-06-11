@@ -13,3 +13,11 @@ document.getElementById("switchButton").onclick = function () {
   // console.log(a);
   // document.getElementById("findUs").classList.toggle("dark");
 };
+
+function openOverlay() {
+  document.getElementById("overlay").classList.toggle("open");
+}
+
+function closeOverlay() {
+  document.getElementById("overlay").classList.toggle("open");
+}
