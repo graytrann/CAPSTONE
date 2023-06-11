@@ -97,7 +97,6 @@ h1 a.logo_brand {
   font-weight: 700;
   color: #eee;
   text-decoration: none;
-  margin-left: 44px;
 }
 
 .header_right_content {
@@ -458,7 +457,7 @@ footer {
   display: inline-block;
   text-align: center;
   font-size: 16px;
-  background: white;
+  background: #343332;
   width: 36px;
   height: 36px;
   line-height: 36px;
@@ -527,7 +526,17 @@ footer {
   border: 1px solid #ff6600;
   background-color: #232220;
 }
-
+.about_footer_item .btn-style {
+  padding: 15px;
+  background-color: #ff6600;
+  border: 1px solid #ff6600;
+  transition: all 0.5s;
+}
+.about_footer_item .btn-style:hover {
+  border: 1px solid #ff6600;
+  background-color: #ff6600;
+  opacity: 0.8;
+}
 /* COPYRIGHT */
 .about_footer_copyright {
   background-color: black;
