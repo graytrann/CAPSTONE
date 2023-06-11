@@ -43,6 +43,11 @@
   border: 1px solid white;
 }
 
+.header_right_content .btn {
+  background-color: rgba(157, 157, 157, 0) !important;
+  border-color: rgba(157, 157, 157, 0) !important;
+}
+
 * {
   margin: 0;
   padding: 0;
