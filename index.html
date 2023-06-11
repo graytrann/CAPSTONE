@@ -615,20 +615,15 @@
         <div class="container py-lg-5">
           <div class="video_content position-relative">
             <!--//video-->
-            <a href="#small-dialog" class="open-popup-link popup-with-zoom-anim text-center">
-              <span class="video_play_icon">
+            <a href="#small-dialog" class="popup-with-zoom-anim play-view text-center pl-3">
+              <span class="video-play-icon">
                 <i class="fa fa-play"></i>
               </span>
             </a>
           </div>
 
           <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
-            <iframe 
-              src="https://player.vimeo.com/video/305185528" 
-              frameborder="0" 
-              allow="autoplay; fullscreen" 
-              allowfullscreen="">
-            </iframe>
+            <iframe src="https://player.vimeo.com/video/305185528" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
           </div>
         </div>
       </div>
@@ -1017,7 +1012,7 @@
     <script>
       $(document).ready(function () {
         $(".popup-with-zoom-anim").magnificPopup({
-          type: "inline",
+          type: 'inline',
 
           fixedContentPos: false,
           fixedBgPos: true,
@@ -1041,23 +1036,23 @@
 
     <script>
       $(document).ready(function () {
-        $("#owl-agency").owlCarousel({
-          loop: true,
-          nav: false,
-          margin: 50,
-          responsiveClass: true,
-          responsive: {
-            0: {
-              items: 1,
-              nav: false
-            },
-            736: {
-              items: 1,
-              nav: false
-            }
-          }
-        })
-      })
+        $(".popup-with-zoom-anim").magnificPopup({
+          type: 'inline',
+
+          alignTop:false,
+          fixedContentPos: false,
+          fixedBgPos: true,
+
+          overflowY: "auto",
+
+          closeBtnInside: true,
+          preloader: false,
+
+          midClick: true,
+          removalDelay: 300,
+          mainClass: "my-mfp-zoom-in"
+        });
+      });
     </script>
 
     <script src="./index.js"></script>
